@@ -1,0 +1,8 @@
+.registration-footer {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(31, 78, 55, 0.1);
+  color: #829087;
+  font-size: 11px;
+}

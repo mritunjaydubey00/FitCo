@@ -1,0 +1,36 @@
+.registration-header {
+  height: 72px;
+  border-bottom: 1px solid rgba(31, 78, 55, 0.1);
+}
+
+.registration-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #18251f;
+  font-size: 23px;
+  font-weight: 750;
+  letter-spacing: -1.2px;
+  text-decoration: none;
+}
+
+.registration-brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: #fff;
+  background: #287c58;
+}
+
+.registration-brand-mark svg {
+  width: 22px;
+  height: 22px;
+}
+
+.registration-header-note {
+  color: #6d7b74;
+  font-size: 13px;
+  font-weight: 550;
+}

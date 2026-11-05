@@ -1,0 +1,140 @@
+.registration-intro {
+  position: relative;
+  padding: clamp(0rem, 5vh, 3.5rem) 0;
+}
+
+.registration-eyebrow,
+.registration-form-step {
+  color: #287c58;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+}
+
+.registration-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.registration-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #64aa7d;
+  box-shadow: 0 0 0 4px rgba(100, 170, 125, 0.13);
+}
+
+.registration-intro h1 {
+  max-width: 470px;
+  margin: 24px 0 18px;
+  color: #18251f;
+  font-size: clamp(42px, 5.2vw, 66px);
+  font-weight: 650;
+  letter-spacing: -3.4px;
+  line-height: 1.04;
+}
+
+.registration-intro-copy {
+  max-width: 430px;
+  color: #6d7b74;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.registration-highlight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.registration-highlight-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid #d5e5d9;
+  border-radius: 14px;
+  color: #287c58;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.registration-highlight-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.registration-highlight div:last-child {
+  display: grid;
+  gap: 4px;
+}
+
+.registration-highlight strong {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.registration-highlight span {
+  color: #6d7b74;
+  font-size: 12px;
+}
+
+.registration-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: end;
+  gap: 7px;
+  height: 58px;
+  opacity: 0.62;
+}
+
+.registration-decoration span {
+  width: 8px;
+  height: 28px;
+  border-radius: 8px;
+  background: #c7dfce;
+  transform: rotate(38deg);
+}
+
+.registration-decoration span:nth-child(2) {
+  height: 42px;
+  background: #b6d6c0;
+}
+
+.registration-decoration span:nth-child(3) {
+  height: 19px;
+}
+
+@media (max-width: 991.98px) {
+  .registration-intro {
+    padding: 0;
+  }
+
+  .registration-intro h1 {
+    font-size: clamp(42px, 8vw, 58px);
+    letter-spacing: -2.6px;
+  }
+
+  .registration-highlight {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .registration-intro h1 {
+    margin-top: 18px;
+    font-size: clamp(40px, 11vw, 52px);
+  }
+
+  .registration-intro-copy {
+    font-size: 14px;
+  }
+
+  .registration-decoration {
+    display: none;
+  }
+}
