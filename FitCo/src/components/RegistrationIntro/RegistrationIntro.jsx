@@ -14,10 +14,18 @@ function RegistrationIntro() {
         Bring your gym online. Start building a stronger connection with the
         people looking for a place to train.
       </p>
-      <a className="registration-intro-cta" href="#gym-registration-form">
-        Get started
-        <span aria-hidden="true">↓</span>
-      </a>
+      <div className="registration-intro-actions">
+        <a
+          className="registration-intro-cta physical-button"
+          href="#gym-registration-form"
+        >
+          Get started
+          <span aria-hidden="true">↓</span>
+        </a>
+        <a className="registration-terms-cta physical-button" href="/terms">
+          Terms and Services
+        </a>
+      </div>
       <div className="registration-benefits" aria-label="Why register your gym">
         <div className="registration-benefit">
           <span className="registration-benefit-icon" aria-hidden="true">01</span>

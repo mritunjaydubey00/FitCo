@@ -68,6 +68,8 @@
 
 .registration-submit {
   min-height: 50px;
+  max-width: 300px;
+  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,5 +109,11 @@
 
   .registration-form-heading h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 991.98px) {
+  .registration-form-heading {
+    text-align: center;
   }
 }

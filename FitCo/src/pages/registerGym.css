@@ -50,8 +50,17 @@
   padding-bottom: clamp(2.5rem, 6vh, 4rem);
 }
 
-.registration-main > .row {
-  width: 100%;
+@media (orientation: portrait) and (max-width: 991.98px) {
+  .registration-form-column {
+    display: flex;
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .registration-form-card {
+    width: calc(100% - 24px);
+    max-width: 540px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -70,6 +79,35 @@
     right: -15rem;
     bottom: -10rem;
     width: 28rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .registration-main--mobile-motion-ready .registration-intro {
+    transition:
+      opacity 420ms ease,
+      transform 520ms cubic-bezier(0.2, 0.7, 0.25, 1);
+    will-change: opacity, transform;
+  }
+
+  .registration-main--mobile-motion-ready .registration-form-card {
+    opacity: 0;
+    transform: translate3d(0, 42px, 0);
+    transition:
+      opacity 520ms ease,
+      transform 620ms cubic-bezier(0.2, 0.7, 0.25, 1);
+    will-change: opacity, transform;
+  }
+
+  .registration-main--form-revealed .registration-intro {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(0, -22px, 0);
+  }
+
+  .registration-main--form-revealed .registration-form-card {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -99,6 +137,14 @@
   .gym-registration::before,
   .gym-registration::after {
     animation: none;
+    will-change: auto;
+  }
+
+  .registration-main--mobile-motion-ready .registration-intro,
+  .registration-main--mobile-motion-ready .registration-form-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
     will-change: auto;
   }
 }

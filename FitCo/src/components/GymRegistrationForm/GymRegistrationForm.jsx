@@ -131,7 +131,7 @@ function GymRegistrationForm() {
         </div>
         <div className="col-12">
           <button
-            className="btn btn-success w-100 registration-submit"
+            className="btn btn-success w-100 registration-submit physical-button"
             type="submit"
             disabled={isSubmitting}
           >
