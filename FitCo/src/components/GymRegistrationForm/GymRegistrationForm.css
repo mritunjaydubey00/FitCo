@@ -1,23 +1,24 @@
 .registration-form-card {
-  padding: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1.5rem, 3.2vw, 2.6rem);
   border: 1px solid rgba(28, 73, 51, 0.08);
   border-radius: 22px;
   background: #fff;
   box-shadow:
-    0 24px 64px rgba(28, 64, 45, 0.08),
-    0 3px 10px rgba(28, 64, 45, 0.03);
+    0 28px 70px rgba(28, 64, 45, 0.09),
+    0 4px 12px rgba(28, 64, 45, 0.035);
+  scroll-margin-top: 1.5rem;
 }
 
 .registration-form-heading {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .registration-form-heading h2 {
   margin: 10px 0 7px;
   color: #18251f;
-  font-size: 26px;
-  font-weight: 650;
-  letter-spacing: -0.8px;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
   line-height: 1.2;
 }
 
@@ -30,21 +31,21 @@
 
 .registration-form-card .form-label {
   margin-bottom: 0.4rem;
-  color: #34443b;
-  font-size: 12px;
-  font-weight: 650;
+  color: #2e4035;
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .registration-form-card .form-control {
-  min-height: 45px;
-  border-color: #dce5df;
-  border-radius: 9px;
+  min-height: 47px;
+  border-color: #d9e2d9;
+  border-radius: 10px;
   color: #18251f;
-  font-size: 13px;
+  font-size: 0.84rem;
 }
 
 .registration-form-card textarea.form-control {
-  min-height: 78px;
+  min-height: 72px;
   resize: vertical;
 }
 
@@ -66,22 +67,23 @@
 }
 
 .registration-submit {
-  min-height: 48px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   border-color: #287c58;
-  border-radius: 9px;
-  background-color: #287c58;
-  font-size: 13px;
-  font-weight: 650;
+  border-radius: 10px;
+  background-color: #1f6343;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(31, 99, 67, 0.18);
 }
 
 .registration-submit:hover,
 .registration-submit:focus {
-  border-color: #206949;
-  background-color: #206949;
+  border-color: #174e34;
+  background-color: #174e34;
 }
 
 .registration-submit svg {
@@ -99,11 +101,11 @@
 
 @media (max-width: 575.98px) {
   .registration-form-card {
-    padding: 1.5rem 1.25rem;
-    border-radius: 17px;
+    padding: 1.4rem 1.2rem;
+    border-radius: 18px;
   }
 
   .registration-form-heading h2 {
-    font-size: 23px;
+    font-size: 1.5rem;
   }
 }

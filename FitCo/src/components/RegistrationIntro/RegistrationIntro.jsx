@@ -5,29 +5,27 @@ function RegistrationIntro() {
     <section className="registration-intro" aria-labelledby="registration-title">
       <div className="registration-eyebrow">
         <span className="registration-eyebrow-dot" />
-        GROW WITH FITCO
+        FOR GYM OWNERS
       </div>
-      <h1 id="registration-title">Your gym belongs here.</h1>
+      <h1 id="registration-title">
+        Your gym’s next <span>big move.</span>
+      </h1>
       <p className="registration-intro-copy">
-        Put your gym in front of more people. Tell us a little about your
-        business and we’ll get you started.
+        Bring your gym online. Start building a stronger connection with the
+        people looking for a place to train.
       </p>
-
-      <div className="registration-highlight">
-        <div className="registration-highlight-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path
-              d="M4 19V9l8-5 8 5v10M9 19v-6h6v6M2 19h20"
-              stroke="currentColor"
-              strokeWidth="1.7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+      <a className="registration-intro-cta" href="#gym-registration-form">
+        Get started
+        <span aria-hidden="true">↓</span>
+      </a>
+      <div className="registration-benefits" aria-label="Why register your gym">
+        <div className="registration-benefit">
+          <span className="registration-benefit-icon" aria-hidden="true">01</span>
+          <span>Put your gym on the digital map</span>
         </div>
-        <div>
-          <strong>One simple step</strong>
-          <span>Start your gym’s journey with FitCo.</span>
+        <div className="registration-benefit">
+          <span className="registration-benefit-icon" aria-hidden="true">02</span>
+          <span>Make it easier for people to find you</span>
         </div>
       </div>
       <div className="registration-decoration" aria-hidden="true">

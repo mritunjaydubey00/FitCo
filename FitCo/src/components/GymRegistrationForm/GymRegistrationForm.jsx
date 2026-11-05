@@ -2,23 +2,59 @@ import { useState } from 'react'
 import './GymRegistrationForm.css'
 
 function GymRegistrationForm() {
-  const [notice, setNotice] = useState('')
+  const [notice, setNotice] = useState(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
-    setNotice('Supabase is not connected yet, so your details have not been saved.')
+    setNotice(null)
+    setIsSubmitting(true)
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const payload = Object.fromEntries(formData.entries())
+
+    try {
+      const response = await fetch('/api/gym-registrations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'We could not submit your registration.')
+      }
+
+      setNotice({ type: 'success', message: result.message })
+      form.reset()
+    } catch (error) {
+      setNotice({
+        type: 'error',
+        message:
+          error instanceof Error
+            ? error.message
+            : 'Unable to contact the registration server. Please try again.',
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
-    <section className="registration-form-card" aria-labelledby="form-title">
+    <section
+      className="registration-form-card"
+      id="gym-registration-form"
+      aria-labelledby="form-title"
+    >
       <div className="registration-form-heading">
-        <span className="registration-form-step">GYM REGISTRATION</span>
-        <h2 id="form-title">Tell us about your gym</h2>
-        <p>Fill in your details to get your registration started.</p>
+        <span className="registration-form-step">LET’S GET YOU STARTED</span>
+        <h2 id="form-title">Register your gym</h2>
+        <p>Share a few details. We’ll take it from here.</p>
       </div>
 
       <form className="row g-3" onSubmit={handleSubmit}>
-        <div className="col-12">
+        <div className="col-12 col-sm-6">
           <label className="form-label" htmlFor="gym-name">Gym name</label>
           <input
             className="form-control"
@@ -32,7 +68,7 @@ function GymRegistrationForm() {
           />
         </div>
 
-        <div className="col-12">
+        <div className="col-12 col-sm-6">
           <label className="form-label" htmlFor="owner-name">Gym owner’s name</label>
           <input
             className="form-control"
@@ -94,8 +130,12 @@ function GymRegistrationForm() {
           </p>
         </div>
         <div className="col-12">
-          <button className="btn btn-success w-100 registration-submit" type="submit">
-            Register your gym
+          <button
+            className="btn btn-success w-100 registration-submit"
+            type="submit"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Submitting…' : 'Register your gym'}
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path
                 d="M4 10h12m-5-5 5 5-5 5"
@@ -108,8 +148,12 @@ function GymRegistrationForm() {
           </button>
         </div>
         <div className="col-12">
-          <p className="registration-form-notice" role="status" aria-live="polite">
-            {notice}
+          <p
+            className={`registration-form-notice ${notice ? `is-${notice.type}` : ''}`}
+            role={notice?.type === 'error' ? 'alert' : 'status'}
+            aria-live="polite"
+          >
+            {notice?.message}
           </p>
         </div>
       </form>

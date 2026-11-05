@@ -3,6 +3,7 @@ import GymRegistrationForm from '../components/GymRegistrationForm/GymRegistrati
 import RegistrationFooter from '../components/RegistrationFooter/RegistrationFooter.jsx'
 import RegistrationHeader from '../components/RegistrationHeader/RegistrationHeader.jsx'
 import RegistrationIntro from '../components/RegistrationIntro/RegistrationIntro.jsx'
+import RegistrationReassurance from '../components/RegistrationReassurance/RegistrationReassurance.jsx'
 
 function RegisterGym() {
   return (
@@ -20,6 +21,7 @@ function RegisterGym() {
         </div>
       </main>
 
+      <RegistrationReassurance />
       <RegistrationFooter />
     </div>
   )

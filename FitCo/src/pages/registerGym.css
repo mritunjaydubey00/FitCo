@@ -2,14 +2,32 @@
   --gym-ink: #18251f;
   --gym-muted: #6d7b74;
   --gym-green: #287c58;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   color: var(--gym-ink);
   background:
-    radial-gradient(ellipse at 9% 47%, rgba(181, 222, 197, 0.22), transparent 34%),
-    #f5f8f5;
+    radial-gradient(ellipse at 4% 18%, rgba(195, 222, 189, 0.42), transparent 38%),
+    radial-gradient(ellipse at 99% 63%, rgba(227, 216, 180, 0.2), transparent 30%),
+    #f5f7f1;
 }
 
 .registration-main {
-  padding-top: clamp(3rem, 8vh, 5.5rem);
-  padding-bottom: clamp(3rem, 8vh, 5.5rem);
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  width: 100%;
+  padding-top: clamp(2.5rem, 7vh, 5rem);
+  padding-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+
+.registration-main > .row {
+  width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .registration-main {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
 }

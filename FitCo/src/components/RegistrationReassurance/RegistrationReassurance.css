@@ -1,0 +1,118 @@
+.registration-reassurance {
+  width: 100%;
+  padding-bottom: 1.25rem;
+}
+
+.reassurance-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 2.5rem);
+  overflow: hidden;
+  padding: 1.1rem clamp(1.25rem, 4vw, 2.75rem);
+  border: 1px solid rgba(44, 104, 70, 0.11);
+  border-radius: 18px;
+  background: linear-gradient(110deg, #eaf3e8 0%, #f2f2e7 100%);
+}
+
+.reassurance-card::before,
+.reassurance-card::after {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  border: 1px solid rgba(72, 131, 88, 0.12);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.reassurance-card::before {
+  top: -50px;
+  left: 7%;
+}
+
+.reassurance-card::after {
+  right: 9%;
+  bottom: -62px;
+  width: 112px;
+  height: 112px;
+}
+
+.reassurance-doodle {
+  z-index: 1;
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid rgba(44, 104, 70, 0.1);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 26px;
+  transform: rotate(-7deg);
+}
+
+.reassurance-doodle-right {
+  font-size: 29px;
+  transform: rotate(8deg);
+}
+
+.reassurance-copy {
+  z-index: 1;
+  text-align: center;
+}
+
+.reassurance-eyebrow {
+  color: #287c58;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+}
+
+.reassurance-copy h2 {
+  margin: 0.25rem 0;
+  color: #18251f;
+  font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+}
+
+.reassurance-copy p {
+  margin: 0;
+  color: #617168;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+@media (max-width: 575.98px) {
+  .registration-reassurance {
+    padding-bottom: 1.25rem;
+  }
+
+  .reassurance-card {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.65rem;
+    padding: 1rem 0.7rem;
+    border-radius: 15px;
+  }
+
+  .reassurance-doodle {
+    width: 38px;
+    height: 38px;
+    border-radius: 13px;
+    font-size: 20px;
+  }
+
+  .reassurance-doodle-right {
+    font-size: 21px;
+  }
+
+  .reassurance-copy h2 {
+    font-size: 0.95rem;
+  }
+
+  .reassurance-copy p {
+    font-size: 11px;
+  }
+}
